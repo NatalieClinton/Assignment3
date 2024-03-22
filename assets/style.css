@@ -13,7 +13,7 @@ body,
 }
 
 body {
-  font-family: sans-serif;
+  font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
   background-color: #f9fbfd;
 }
 
@@ -93,7 +93,7 @@ tbody tr:nth-child(even) {
 
 .btn {
   border: none;
-  background-color: hsl(223, 74%, 48%);
+  background-color: hsl(94, 61%, 24%);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
   color: hsl(0, 0%, 100%);
@@ -104,6 +104,7 @@ tbody tr:nth-child(even) {
   padding: 14px 34px;
   text-align: center;
   cursor: pointer;
+  font-family: 'Trebuchet MS';
 }
 
 button[disabled] {
