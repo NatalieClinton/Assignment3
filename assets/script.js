@@ -1,24 +1,24 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
-let employees = [];
+let employees = []; // Array to store employee data
 
 // Collect employee data
 const collectEmployees = function() {
-  let addEmployee = true;
+  let addEmployee = true; // Flag to control loop
 
   while (addEmployee) {
     let firstName = prompt("Enter the first name of the employee:");
     let lastName = prompt("Enter the last name of the employee:");
     let salaryInput = prompt("Enter the salary of the employee (enter a number):");
-    let salary = parseInt(salaryInput) || 0;
+    let salary = parseInt(salaryInput) || 0; // Parse salary defaults to 0
 
-    employees.push({firstName, lastName, salary});
+    employees.push({firstName, lastName, salary}); // Add employee object to employees array
 
-    addEmployee = confirm("Do you want to add another employee?");
+    addEmployee = confirm("Do you want to add another employee?"); 
   }
 
-  return employees;
+  return employees; // Return the array of employees
 }
 
 // Display the average salary
@@ -29,16 +29,16 @@ const displayAverageSalary = function(employeesArray) {
   console.log("The average employee salary between our", employeesArray.length ,"employee(s)", "is", averageSalary.toLocaleString("en-US", {
       style: "currency",
       currency: "USD"
-  }));
+  })); // Displays the average salary in the console
 }
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
-  let randomIndex = Math.floor(Math.random() * employeesArray.length);
-  let randomEmployee = employeesArray[randomIndex];
+  let randomIndex = Math.floor(Math.random() * employeesArray.length); // Generates random index
+  let randomEmployee = employeesArray[randomIndex]; // Retrieves a random employee from the array
 
   console.log("Congratulations to",`${randomEmployee.firstName} ${randomEmployee.lastName}`,", our random drawing winner!");
-}
+} // Displays the random employee in the console
 
 /*
   ====================
